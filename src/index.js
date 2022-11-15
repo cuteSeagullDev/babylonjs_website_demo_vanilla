@@ -1,4 +1,4 @@
-import makeVisualizer from "./modules/visualizer.js";
+import makeVisualizer from "../modules/visualizer.js";
 
 
 /*
