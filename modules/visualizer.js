@@ -1,3 +1,5 @@
+//this needs to be rebuilt. perhaps using Babylon's animation feature
+
 function createVisualizer (mesh, sound, scene) {
 
     //sets up analyzer
@@ -71,7 +73,7 @@ function createVisualizer (mesh, sound, scene) {
         }
     });
 
-    const particles = createParticleSystem(mesh, -2);
+    // const particles = createParticleSystem(mesh, 0);
     let isPlaying = false;
 
     playButton.onPointerClickObservable.add(function(){
@@ -79,14 +81,14 @@ function createVisualizer (mesh, sound, scene) {
                 sound.play();
                 isPlaying = true;
             }
-            particles.start();
+            // particles.start();
     })
 
     stopButton.onPointerClickObservable.add(function(){
             sound.stop();
             isPlaying = false;
-            particles.stop();
-            particles.reset();
+            // particles.stop();
+            // particles.reset();
     })
 
 }
