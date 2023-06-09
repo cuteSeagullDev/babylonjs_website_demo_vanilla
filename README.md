@@ -4,4 +4,4 @@
 
 ###3 main files: index.html, index.js, index.css
 
-It is meant to have an audio visualizer effect, but that has to be rebuilt. It was causing issues with the mesh importing. 
+It is meant to have an audio visualizer effect, but that has to be rebuilt. It was causing issues with the mesh importing. --
