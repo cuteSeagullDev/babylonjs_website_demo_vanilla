@@ -13,36 +13,43 @@
 </head>
 
 <body>
-    <header>
-
-        <nav>
-            <h1 class="logo">Logo</h1>
-
-            <div class="menu">
+    <div id="root">
+        <header>
+            <nav>
+                <h1 class="logo">Logo</h1>
+    
+                <div class="menu">
+                    <a href="/" onclick="route()">Home</a>
+                    <a href="/about" onclick="route()">About</a>
+                    <a href="/contact" onclick="route()">Contact</a>
+                </div>
+    
+                <button class="hamburger">
+                    <span class="material-icons">menu</span>
+                </button>
+            </nav>
+    
+            <div class="mobile-menu">
                 <a href="/">Home</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href=./pages/about.html">About</a>
+                <a href="./pages/contact.html">Contact</a>
             </div>
+            <script>
+                const hamburger = document.querySelector('.hamburger');
+                const hamburger_icon = hamburger.querySelector('span');
+                const mobile_menu = document.querySelector('.mobile-menu');
 
-            <button class="hamburger">
-                <span class="material-icons">menu</span>
-            </button>
-        </nav>
+                hamburger.addEventListener('click', () => {
+                    hamburger_icon.innerText = hamburger_icon.innerText === 'menu' ? 'close' : 'menu';
+                    mobile_menu.classList.toggle('is-open');
+                })
+            </script>
+    
+        </header>
+        <div id="main-page"></div>
 
-        <div class="mobile-menu">
-            <a href="/">Home</a>
-            <a href="#">Projects</a>
-            <a href=about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </div>
-
-    </header>
-
-    <canvas id="renderCanvas"></canvas>
-
-    <footer id="footer"><a href="https://github.com/cgcreatexyz/CGcreate_assets/tree/main/BlenderModels/BoomBox"> CC0 Boombox model available in repo</a></footer>
-
-    <script type="module" src="index.js"></script> 
+    </div>    
+    <script type="module" src="router.js"></script> 
 </body>
 </html>
 
