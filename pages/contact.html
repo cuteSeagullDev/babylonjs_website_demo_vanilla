@@ -1,0 +1,33 @@
+<div class= "page-container">
+    <form onsubmit="sendEmail()">
+        <h3>CONTACT ME, MMK</h3>
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <input type="text" id="phone" placeholder="Phone">
+        <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+        <button type="submit">Send</button>
+    </form>
+</div>
+
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>   
+    <script>
+    function sendEmail(){
+        Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "username",
+            Password : "password",
+            To : 'them@website.com',
+            From : "you@isp.com",
+            Subject : "This is the subject",
+            Body : "And this is the body"
+        }).then(
+            message => alert(message)
+        );
+    }
+    //access encrypted smtp server credentials through smtpjs.com
+
+    </script>
+
+</body>
+</html>

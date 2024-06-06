@@ -1,21 +1,3 @@
-import makeVisualizer from "../modules/visualizer.js";
-
-
-/*
-*
-*menu toggle
-*
-*/
-
-const hamburger = document.querySelector('.hamburger');
-const hamburger_icon = hamburger.querySelector('span');
-const mobile_menu = document.querySelector('.mobile-menu');
-
-hamburger.addEventListener('click', () => {
-    hamburger_icon.innerText = hamburger_icon.innerText === 'menu' ? 'close' : 'menu';
-    mobile_menu.classList.toggle('is-open');
-})
-
 
 /*
 *
@@ -54,7 +36,7 @@ const createScene = function () {
 
 
     //  IMPORTS MESH. all changes to mesh must be within onSuccess callback
-    BABYLON.SceneLoader.ImportMesh("", "assets/", "boomboxlowerpoly.glb", scene, function (meshes) {  
+    BABYLON.SceneLoader.ImportMesh("", "../assets/", "boomboxlowerpoly.glb", scene, function (meshes) {  
         //along with scaleInPlace in line 153, keeps mesh from mirroring backward
         scene.createDefaultCamera(true, true, true);
         // scene.useRightHandedSystem = true;
@@ -100,11 +82,8 @@ const createScene = function () {
         backgroundMaterial.shadowOnly = true;
         ground.material = backgroundMaterial;
 
-
     })  
-
     return scene;
-
 };
 
 const scene = createScene(); 
@@ -119,10 +98,8 @@ window.addEventListener("resize", function () {
 });
 
 
-
-
 //device orientation playground test:
 //https://playground.babylonjs.com/#JR6K11#1
 
 //with purple hdri, for realistic
-//https://playground.babylonjs.com/#0DDTS1#1
+//https://playground.babylonjs.com/#0DDTS1#5
