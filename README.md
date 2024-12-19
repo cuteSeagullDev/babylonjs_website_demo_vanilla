@@ -3,4 +3,6 @@
 ([View demo deployed through Netlify](https://cgcreatexyz-bjs-boilerplate-vanilla.netlify.app/))
 
 
-A bit of vanilla boilerplate with a custom client-side routing solution. The technical debt consists of replacing the iframe with local code. And more demos. And more css.
+VanillaJS boilerplate with a custom client-side routing solution and a slider consisting of interactive webgl scenes.
+
+The technical debt consists of better quality glb files, improved page design, and making the routing script more scalable.
