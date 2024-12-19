@@ -5,6 +5,7 @@
     <title>Babylon Template</title>
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="pages/home/home.css">
     <script src="https://cdn.babylonjs.com/babylon.js"></script>
     <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
     <script src="https://cdn.babylonjs.com/gui/babylon.gui.min.js"></script>
@@ -29,9 +30,9 @@
             </nav>
     
             <div class="mobile-menu">
-                <a href="/">Home</a>
-                <a href=./pages/about.html">About</a>
-                <a href="./pages/contact.html">Contact</a>
+                <a href="/" onclick="route()">Home</a>
+                <a href=./pages/about.html" onclick="route()">About</a>
+                <a href="./pages/contact.html" onclick="route()">Contact</a>
             </div>
             <script>
                 const hamburger = document.querySelector('.hamburger');
@@ -47,12 +48,17 @@
         </header>
         <div id="main-page"></div>  
     <script type="module" src="router.js"></script> 
+
+
 </body>
 </html>
+
+
 
 <!--
 run server:
 http-server-spa . ./index.html
+live-server
 
 http://localhost:8080
 
