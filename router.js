@@ -1,5 +1,3 @@
-
-
 const route = (event) => {
     event = event || window.event;
     event.preventDefault();
@@ -21,11 +19,23 @@ const handleLocation = async () => {
     document.getElementById("main-page").innerHTML = html;
 
     if (path === '/' || path === '/pages/home/home.html') {
+        // Import the slider.js module dynamically
         import('./modules/slider.js').then(module => {
             // Slider module loaded and executed
         }).catch(err => console.error('Failed to load slider module: ', err));
-    }
 
+        // Import the createBabylonScene.js module dynamically
+        import('./modules/createBabylonScene.js').then(module => {
+            console.log('createBabylonScene module loaded');
+            // Now you can call the function to initialize the scenes
+            window.addEventListener("load", function () {
+                console.log("Initializing Babylon.js scenes...");
+                module.createBabylonScene("canvas1", "../../assets/cup.glb");
+                module.createBabylonScene("canvas2", "../../assets/icosphere.glb");
+                module.createBabylonScene("canvas3", "../../assets/torus.glb");
+            });
+        }).catch(err => console.error('Failed to load createBabylonScene module: ', err));
+    }
 };
 
 window.onpopstate = handleLocation;

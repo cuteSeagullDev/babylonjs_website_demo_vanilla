@@ -25,3 +25,16 @@
         <span class="dot" onclick="window.currentSlide(3)"></span>
     </div>
 </div>
+
+<script type="module">
+    import { createBabylonScene } from "../../modules/createBabylonScene.js";
+
+    window.addEventListener("load", function () {
+        console.log("Initializing Babylon.js scenes...");
+        createBabylonScene("canvas1", "../../assets/cup.glb");
+        createBabylonScene("canvas2", "../../assets/icosphere.glb");
+        createBabylonScene("canvas3", "../../assets/torus.glb");
+    });
+</script>
+
+
